@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PG Novus — Aqua Professional Design System
+   All colors are HSL semantic tokens. */
+
+@layer base {
+  :root {
+    /* Brand palette (HSL) */
+    --navy: 212 73% 15%;          /* #0A2540 deep navy */
+    --navy-foreground: 0 0% 100%;
+
+    --brand: 199 78% 49%;         /* #1BA3E0 logo blue */
+    --brand-foreground: 0 0% 100%;
+
+    --accent-green: 88 51% 51%;   /* #7AC143 logo green */
+    --accent-green-foreground: 0 0% 100%;
+
+    --slate: 213 11% 40%;         /* #5A6470 body text */
+    --mist: 207 38% 97%;          /* #F4F8FB section bg */
+    --border-subtle: 210 20% 90%;
+    --destructive: 0 75% 55%;
+
+    /* Semantic */
+    --background: 0 0% 100%;
+    --foreground: 212 73% 15%;
+    --muted: 207 38% 97%;
+    --muted-foreground: 213 11% 40%;
+    --ring: 199 78% 49%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(212 73% 15% / 0.85) 0%, hsl(199 78% 25% / 0.7) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(199 78% 49%) 0%, hsl(199 78% 39%) 100%);
+    --gradient-mist: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(207 38% 97%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 1px 3px hsl(212 73% 15% / 0.06), 0 8px 24px hsl(212 73% 15% / 0.06);
+    --shadow-elevated: 0 4px 16px hsl(212 73% 15% / 0.08), 0 16px 40px hsl(212 73% 15% / 0.1);
+    --shadow-glow: 0 8px 32px hsl(199 78% 49% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[hsl(var(--border-subtle))];
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', system-ui, -apple-system, sans-serif;
+    @apply text-navy font-semibold tracking-tight;
+    line-height: 1.15;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  ::selection {
+    background-color: hsl(var(--brand) / 0.2);
+    color: hsl(var(--navy));
+  }
+}
+
+@layer utilities {
+  .container-px { @apply px-5 sm:px-8 lg:px-12; }
+  .section-py { @apply py-20 lg:py-28; }
+  .text-balance { text-wrap: balance; }
+
+  /* Subtle water ripple background */
+  .bg-ripple {
+    background-image:
+      radial-gradient(circle at 20% 30%, hsl(199 78% 49% / 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, hsl(88 51% 51% / 0.05) 0%, transparent 40%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
