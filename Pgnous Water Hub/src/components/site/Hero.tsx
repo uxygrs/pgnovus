@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
-import etpImg from "@/assets/hero-etp.jpg";
-import stpImg from "@/assets/hero-stp.jpg";
-import roImg from "@/assets/hero-ro.jpg";
-import coolingImg from "@/assets/hero-cooling.jpg";
-import logo from "@/assets/pgnovus-logo.png";
+import etpImg from "@/assets/hero-etp.svg";
+import stpImg from "@/assets/hero-stp.svg";
+import roImg from "@/assets/hero-ro.svg";
+import coolingImg from "@/assets/hero-cooling.svg";
+import logo from "@/assets/pgnovus-logo.svg";
 
 const SLIDES = [
   { src: etpImg, alt: "Large-scale effluent treatment plant" },

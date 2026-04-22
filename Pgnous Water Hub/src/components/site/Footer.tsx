@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Globe, Share2, Send } from "lucide-react";
-import logo from "@/assets/pgnovus-logo.png";
+import logo from "@/assets/pgnovus-logo.svg";
 import { Button } from "@/components/ui/Button";
 
 interface FooterProps {

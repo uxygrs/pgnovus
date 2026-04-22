@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import logo from "@/assets/pgnovus-logo.png";
+import logo from "@/assets/pgnovus-logo.svg";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
